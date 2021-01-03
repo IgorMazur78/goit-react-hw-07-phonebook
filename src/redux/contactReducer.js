@@ -33,8 +33,7 @@ const deleteContact = (state, { payload }) => {
 };
 
 const itemContacts = createReducer( [], {
-   
-  [contactAction.fetchContactSuccess]:addContact,
+  [contactAction.fetchContactSuccess]:(state, {payload}) => payload ,
   [contactAction.addContactSuccess]: addContact,
   [contactAction.deleteContactSuccess]: deleteContact,
 });

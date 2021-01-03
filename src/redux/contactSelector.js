@@ -13,14 +13,7 @@ const getFilter = (state) => state.allContacts.filter;
       return visibleContact;
  })
 
-//  const getVisibleContact = state => {
-//     const contacts = getitemContacts(state);
-//     const visibleContact = contacts.filter((contact) => {
-//       const str = contact.name.toLowerCase();
-//       return str.includes(getFilter(state).toLowerCase());
-//     });
-//     return visibleContact;
-//  }
+
 
 export default {
     getitemContacts,

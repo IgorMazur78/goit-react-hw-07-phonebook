@@ -1,7 +1,7 @@
 import axios from "axios";
 import contactAction from "./contactAction";
 
-axios.defaults.baseURL = "http://localhost:2000"
+axios.defaults.baseURL = "http://localhost:4000"
 
 const addContacts = (name, number) => (dispatch) => {
   dispatch(contactAction.addContactRecuest());
@@ -16,9 +16,9 @@ const addContacts = (name, number) => (dispatch) => {
 const fetchContacts = () => (dispatch) => {
   dispatch(contactAction.fetchContactRecuest());
   axios
-    .post("/contacts")
+    .get("/contacts")
     .then((response) => {
-      console.log(response);
+      console.log(response.data);
       dispatch(contactAction.fetchContactSuccess(response.data));
     })
     .catch((error) => dispatch(contactAction.fetchContactError(error)));
