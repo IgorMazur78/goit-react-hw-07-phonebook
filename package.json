@@ -26,7 +26,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "server": "json-server -p 4000 -w db.json"
+    "server": "json-server -p 2020 -w db.json"
   },
   "eslintConfig": {
     "extends": [

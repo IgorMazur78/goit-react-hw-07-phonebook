@@ -17,10 +17,9 @@ const deleteContactError = createAction("contact/deleteContactError");
 
 const filterContact = createAction("contact/filter");
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  // addContact,
-  // deleteContact,
-  filterContact,
+   filterContact,
   addContactRecuest,
   addContactSuccess,
   fetchContactSuccess,

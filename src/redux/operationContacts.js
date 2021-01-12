@@ -1,8 +1,8 @@
 import axios from "axios";
 import contactAction from "./contactAction";
 
-axios.defaults.baseURL = "http://localhost:4000"
-
+axios.defaults.baseURL = "https://my-json-server.typicode.com/igormazur78.github.io/goit-react-hw-07-phonebook/";
+axios.defaults.headers = {"Access-Control-Allow-Origin": "*"};
 const addContacts = (name, number) => (dispatch) => {
   dispatch(contactAction.addContactRecuest());
   axios
@@ -32,6 +32,7 @@ const deleteContacts = (id) => (dispatch) => {
     .catch((error) => dispatch(contactAction.deleteContactError(error)));
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   addContacts,
   fetchContacts,
