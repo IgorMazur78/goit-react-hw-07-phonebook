@@ -1,7 +1,7 @@
 import axios from "axios";
 import contactAction from "./contactAction";
 
-axios.defaults.baseURL = "https://my-json-server.typicode.com/IgorMazur78/igormazur78.github.io/goit-react-hw-07-phonebook/";
+axios.defaults.baseURL = "https://my-json-server.typicode.com/IgorMazur78/goit-react-hw-07-phonebook/";
 axios.defaults.headers = {"Access-Control-Allow-Origin": "*"};
 const addContacts = (name, number) => (dispatch) => {
   dispatch(contactAction.addContactRecuest());
